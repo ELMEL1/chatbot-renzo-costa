@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Renzo Costa - Asistente Virtual</title>
+  <meta name="description" content="Chatbot de atencion al cliente para Renzo Costa. Consulta productos, precios, horarios, delivery, garantias y mas.">
+  <link rel="icon" type="image/jpeg" href="logo1.jpg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <div class="header-logo">
+        <div class="header-logo-icon">
+          <img src="logo1.jpg" alt="Logo Renzo Costa">
+        </div>
+        <div class="header-brand">
+          <h1>RENZO COSTA</h1>
+          <p>Cuero & Moda Peruana</p>
+        </div>
+      </div>
+
+      <div class="header-badge">Asistente Virtual Activo</div>
+    </div>
+  </header>
+
+  <main class="hero">
+    <section class="info-panel">
+      <div class="info-eyebrow">Asistencia 24/7</div>
+
+      <h2 class="info-titulo">
+        Tu consulta,<br>
+        <span>respondida al instante</span>
+      </h2>
+
+      <p class="info-descripcion">
+        Nuestro asistente virtual te ayuda con productos, precios, promociones,
+        delivery, cambios, garantias, seguimiento de pedidos y ubicacion de tiendas.
+      </p>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">01</div>
+          <div class="feature-text">
+            <strong>Respuesta inmediata</strong>
+            <span>Atencion rapida para consultas frecuentes.</span>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">02</div>
+          <div class="feature-text">
+            <strong>Mas temas cubiertos</strong>
+            <span>Pedidos, reclamos, tallas, materiales y pagos.</span>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">03</div>
+          <div class="feature-text">
+            <strong>Tolerante a errores</strong>
+            <span>Reconoce consultas aunque tengan faltas ortograficas.</span>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">04</div>
+          <div class="feature-text">
+            <strong>Experiencia guiada</strong>
+            <span>Chips rapidos para iniciar una conversacion.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="topicos-label">Preguntas frecuentes</div>
+      <div class="topicos-chips">
+        <button class="chip" onclick="enviarDesdeChip('Que productos tienen?')">Productos</button>
+        <button class="chip" onclick="enviarDesdeChip('Cuales son los precios?')">Precios</button>
+        <button class="chip" onclick="enviarDesdeChip('Tienen promociones?')">Promociones</button>
+        <button class="chip" onclick="enviarDesdeChip('Hacen delivery?')">Delivery</button>
+        <button class="chip" onclick="enviarDesdeChip('Quiero seguir mi pedido')">Seguimiento</button>
+        <button class="chip" onclick="enviarDesdeChip('Como hago un reclamo?')">Reclamos</button>
+        <button class="chip" onclick="enviarDesdeChip('Como funciona la garantia?')">Garantia</button>
+        <button class="chip" onclick="enviarDesdeChip('Tienen guia de tallas?')">Tallas</button>
+        <button class="chip" onclick="enviarDesdeChip('De que material son los productos?')">Materiales</button>
+        <button class="chip" onclick="enviarDesdeChip('Cual es el horario de atencion?')">Horarios</button>
+        <button class="chip" onclick="enviarDesdeChip('Donde estan ubicados?')">Tiendas</button>
+        <button class="chip" onclick="enviarDesdeChip('Cuales son las formas de pago?')">Pagos</button>
+      </div>
+    </section>
+
+    <section class="chat-panel" aria-label="Chat de atencion al cliente">
+      <div class="chat-header">
+        <div class="chat-avatar">
+          <img src="logo1.jpg" alt="Logo Renzo Costa">
+        </div>
+        <div class="chat-header-info">
+          <strong>Asistente Renzo Costa</strong>
+          <span>En linea - Responde al instante</span>
+        </div>
+        <div class="online-dot" title="En linea"></div>
+      </div>
+
+      <div class="chat-mensajes" id="chatMensajes" role="log" aria-live="polite"></div>
+
+      <div class="indicador-escribiendo" id="indicadorEscribiendo" aria-label="El bot esta escribiendo">
+        <div class="mensaje-avatar">
+          <img src="logo1.jpg" alt="">
+        </div>
+        <div class="puntos-escribiendo">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+      <div class="chat-input-area">
+        <input
+          type="text"
+          id="inputMensaje"
+          placeholder="Escribe tu consulta aqui..."
+          maxlength="500"
+          autocomplete="off"
+          aria-label="Escribe un mensaje"
+        />
+
+        <button id="btnEnviar" title="Enviar mensaje" aria-label="Enviar mensaje">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+          </svg>
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="footer-copy">
+      2026 Renzo Costa - Proyecto de Tesis - Universidad de Ciencias y Humanidades
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

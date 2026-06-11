@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Chatbot - Renzo Costa</title>
+  <link rel="icon" type="image/jpeg" href="logo1.jpg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dashboard-page">
+  <header class="header">
+    <div class="header-inner">
+      <div class="header-logo">
+        <div class="header-logo-icon">
+          <img src="logo1.jpg" alt="Logo Renzo Costa">
+        </div>
+        <div class="header-brand">
+          <h1>Dashboard Chatbot</h1>
+          <p>Metricas de consultas</p>
+        </div>
+      </div>
+      <a class="dashboard-link" href="index.html">Volver al chat</a>
+    </div>
+  </header>
+
+  <main class="dashboard">
+    <section class="dashboard-hero">
+      <div>
+        <div class="info-eyebrow">Analitica del asistente</div>
+        <h2>Rendimiento y temas mas consultados</h2>
+        <p>
+          Visualiza la cantidad de consultas clasificadas por intencion para
+          evaluar que necesidades aparecen con mayor frecuencia.
+        </p>
+      </div>
+      <div class="dashboard-status" id="estadoDashboard">Conectando con Flask...</div>
+    </section>
+
+    <section class="dashboard-summary" id="resumenMetricas">
+      <div class="metric-card skeleton"></div>
+      <div class="metric-card skeleton"></div>
+      <div class="metric-card skeleton"></div>
+    </section>
+
+    <section class="dashboard-layout">
+      <article class="dashboard-panel">
+        <div class="panel-header">
+          <div>
+            <span>Ranking</span>
+            <h3>Consultas por intencion</h3>
+          </div>
+        </div>
+        <div class="ranking-list" id="rankingMetricas"></div>
+      </article>
+
+      <article class="dashboard-panel">
+        <div class="panel-header">
+          <div>
+            <span>Detalle</span>
+            <h3>Todas las categorias</h3>
+          </div>
+        </div>
+        <div class="dashboard-grid" id="stats"></div>
+      </article>
+    </section>
+  </main>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>

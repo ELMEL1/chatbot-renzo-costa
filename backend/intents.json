@@ -1,0 +1,347 @@
+{
+  "intents": [
+    {
+      "tag": "saludo",
+      "patterns": [
+        "hola",
+        "buenos dias",
+        "buenas tardes",
+        "buenas noches",
+        "que tal",
+        "como estas",
+        "hola bot",
+        "hola asistente",
+        "necesito ayuda"
+      ],
+      "responses": [
+        "Hola, bienvenido a Renzo Costa. Estoy listo para ayudarte con productos, precios, tiendas, pedidos o cualquier consulta de atencion al cliente.",
+        "Hola. Soy el asistente virtual de Renzo Costa. Cuentame que necesitas y te orientare paso a paso.",
+        "Bienvenido a Renzo Costa. Puedo ayudarte con informacion de productos, promociones, delivery, cambios, garantias y mas."
+      ]
+    },
+    {
+      "tag": "productos",
+      "patterns": [
+        "que productos tienen",
+        "que venden",
+        "catalogo",
+        "productos disponibles",
+        "articulos de cuero",
+        "tienen bolsos",
+        "tienen billeteras",
+        "tienen carteras",
+        "tienen correas",
+        "tienen zapatos",
+        "mochilas",
+        "maletines",
+        "novedades",
+        "coleccion"
+      ],
+      "responses": [
+        "Trabajamos articulos de cuero y moda como carteras, bolsos, billeteras, correas, calzado, mochilas, maletines y accesorios. Si me dices que tipo de producto buscas, puedo orientarte mejor.",
+        "Tenemos productos para dama y caballero: bolsos, carteras, billeteras, correas, zapatos, mochilas y maletines. Tambien contamos con novedades por temporada.",
+        "Claro. Puedes consultar por carteras, billeteras, correas, zapatos, maletines, mochilas o accesorios de cuero. ¿Que producto te interesa?"
+      ]
+    },
+    {
+      "tag": "precios",
+      "patterns": [
+        "precio",
+        "presio",
+        "precios",
+        "cuanto cuesta",
+        "cuanto vale",
+        "cuanto esta",
+        "costo",
+        "valor",
+        "precio de billetera",
+        "precio de cartera",
+        "precio de bolso",
+        "precio de correa",
+        "precio de zapatos",
+        "son caros",
+        "son economicos"
+      ],
+      "responses": [
+        "Los precios varian segun el modelo y la coleccion. Como referencia, las billeteras suelen iniciar desde S/ 89, correas desde S/ 59, carteras desde S/ 129 y zapatos desde S/ 179.",
+        "El precio depende del producto especifico. Si me dices si buscas cartera, billetera, correa, bolso o calzado, te puedo dar una referencia mas precisa.",
+        "Manejamos distintos rangos de precio segun material, tamano y temporada. Para una respuesta mas exacta, dime que producto quieres consultar."
+      ]
+    },
+    {
+      "tag": "promociones",
+      "patterns": [
+        "promociones",
+        "promocion",
+        "promos",
+        "ofertas",
+        "descuentos",
+        "rebajas",
+        "sale",
+        "hay descuento",
+        "cupon",
+        "campana",
+        "liquidacion"
+      ],
+      "responses": [
+        "Solemos tener promociones por temporada, fechas especiales y campanas online. Te recomiendo revisar la web oficial o consultar en tienda por las ofertas vigentes.",
+        "Las promociones pueden cambiar por tienda y fecha. Si buscas un producto especifico, puedo indicarte que tipo de descuento deberias consultar.",
+        "Podrias encontrar descuentos en colecciones seleccionadas, campanas especiales o venta online. ¿Quieres consultar promociones de carteras, billeteras, calzado u otro producto?"
+      ]
+    },
+    {
+      "tag": "delivery",
+      "patterns": [
+        "delivery",
+        "envio",
+        "envios",
+        "reparto",
+        "despacho",
+        "envian a domicilio",
+        "envio a provincia",
+        "envio a lima",
+        "cuanto demora el envio",
+        "costo de envio",
+        "comprar online"
+      ],
+      "responses": [
+        "Si compras online, puedes solicitar envio a domicilio. El tiempo y costo dependen de la zona de entrega y disponibilidad del producto.",
+        "Contamos con opciones de envio para Lima y provincias segun cobertura. Para orientarte mejor, dime a que distrito o ciudad deseas recibir tu pedido.",
+        "El delivery se coordina segun la direccion de entrega. En Lima suele ser mas rapido; para provincias puede tomar algunos dias adicionales."
+      ]
+    },
+    {
+      "tag": "seguimiento_pedido",
+      "patterns": [
+        "seguimiento de pedido",
+        "seguir pedido",
+        "donde esta mi pedido",
+        "estado de mi pedido",
+        "mi compra no llega",
+        "numero de pedido",
+        "tracking",
+        "rastreo",
+        "orden",
+        "cuando llega mi pedido"
+      ],
+      "responses": [
+        "Para revisar el estado de tu pedido necesitas tener a la mano tu numero de compra o comprobante. Con eso, atencion al cliente puede validar el avance del envio.",
+        "Si tu pedido aun no llega, te sugiero contactar a atencion al cliente con tu numero de pedido, nombre completo y fecha de compra.",
+        "Puedo orientarte: revisa tu correo de confirmacion y ubica el numero de pedido. Luego solicita el seguimiento por WhatsApp, telefono o correo de atencion."
+      ]
+    },
+    {
+      "tag": "reclamos",
+      "patterns": [
+        "reclamo",
+        "reclamos",
+        "queja",
+        "problema con mi compra",
+        "mala atencion",
+        "producto defectuoso",
+        "no llego mi pedido",
+        "quiero reclamar",
+        "libro de reclamaciones",
+        "incidencia"
+      ],
+      "responses": [
+        "Lamento el inconveniente. Para registrar un reclamo, ten a la mano tu comprobante, datos de contacto y una descripcion clara del problema.",
+        "Puedes presentar tu reclamo mediante los canales de atencion o el Libro de Reclamaciones. Si me cuentas que ocurrio, te indico que informacion conviene preparar.",
+        "Entiendo. Para gestionar el caso, normalmente se solicita comprobante de compra, fotos del producto si aplica y datos del cliente."
+      ]
+    },
+    {
+      "tag": "garantia",
+      "patterns": [
+        "garantia",
+        "garantias",
+        "cuanto dura la garantia",
+        "producto con falla",
+        "defecto de fabrica",
+        "se rompio",
+        "fallo el cierre",
+        "costura defectuosa",
+        "cambio por garantia"
+      ],
+      "responses": [
+        "La garantia aplica principalmente para defectos de fabricacion. Se recomienda presentar el comprobante de compra y llevar el producto a evaluacion.",
+        "Si el producto presenta una falla de fabrica, puedes solicitar revision por garantia. Conserva tu boleta o comprobante y evita manipular el articulo antes de evaluarlo.",
+        "Para garantia, el equipo revisa el estado del producto, fecha de compra y tipo de falla. ¿La falla esta en cierre, costura, cuero u otra parte?"
+      ]
+    },
+    {
+      "tag": "tallas",
+      "patterns": [
+        "talla",
+        "tallas",
+        "que talla soy",
+        "guia de tallas",
+        "tallas de zapatos",
+        "numero de calzado",
+        "me queda grande",
+        "me queda chico",
+        "medidas",
+        "cinturon talla"
+      ],
+      "responses": [
+        "Para calzado, lo ideal es revisar la guia de tallas y comparar con la medida de tu pie en centimetros. Para correas, conviene medir la cintura o una correa que ya uses.",
+        "Las tallas pueden variar segun modelo. Si me dices si buscas zapatos, correa o prenda, te doy una orientacion mas concreta.",
+        "Si una talla no te queda bien, puedes consultar por cambio siempre que el producto este sin uso y con comprobante."
+      ]
+    },
+    {
+      "tag": "materiales",
+      "patterns": [
+        "material",
+        "materiales",
+        "cuero",
+        "cuero genuino",
+        "tipo de cuero",
+        "de que material es",
+        "calidad",
+        "cuidado del cuero",
+        "como limpiar cuero",
+        "mantenimiento"
+      ],
+      "responses": [
+        "Muchos productos estan elaborados en cuero y materiales seleccionados segun la linea. Para cuidarlos, evita humedad excesiva, sol directo y productos abrasivos.",
+        "El material depende del modelo. Si tienes el nombre o tipo de producto, puedo orientarte sobre que preguntar en tienda o atencion al cliente.",
+        "Para conservar articulos de cuero, limpia con pano suave, guarda en un lugar seco y evita sobrecargar bolsos o billeteras."
+      ]
+    },
+    {
+      "tag": "horarios",
+      "patterns": [
+        "horario",
+        "orario",
+        "horarios",
+        "a que hora abren",
+        "a que hora cierran",
+        "cuando abren",
+        "cuando cierran",
+        "dias de atencion",
+        "atienden domingo",
+        "atienden sabado",
+        "estan abiertos"
+      ],
+      "responses": [
+        "Los horarios pueden variar por tienda. Como referencia, muchas tiendas atienden de lunes a sabado de 10:00 a.m. a 9:00 p.m. y domingos de 11:00 a.m. a 8:00 p.m.",
+        "Atendemos de lunes a domingo en la mayoria de tiendas, aunque el horario depende del centro comercial. ¿Quieres consultar una sede en particular?",
+        "Para darte el horario mas preciso, dime el distrito o centro comercial de la tienda que quieres visitar."
+      ]
+    },
+    {
+      "tag": "ubicacion",
+      "patterns": [
+        "donde estan",
+        "direccion",
+        "ubicacion",
+        "donde queda",
+        "tiendas",
+        "sucursales",
+        "locales",
+        "mapa",
+        "como llegar",
+        "tienda mas cercana",
+        "estan en lima"
+      ],
+      "responses": [
+        "Tenemos tiendas en distintos centros comerciales de Lima y provincias. Si me dices tu distrito o ciudad, puedo orientarte sobre donde consultar la sede mas cercana.",
+        "Puedes encontrarnos en tiendas fisicas y tambien mediante canales online. ¿Buscas una tienda en Lima, provincia o compra por internet?",
+        "Para ubicar una tienda, dime el distrito o centro comercial que te queda mas cerca."
+      ]
+    },
+    {
+      "tag": "devoluciones",
+      "patterns": [
+        "devolucion",
+        "devoluciones",
+        "debolucion",
+        "cambios",
+        "cambiar producto",
+        "devolver producto",
+        "politica de cambios",
+        "no me quedo",
+        "quiero cambiar",
+        "plazo para devolver",
+        "cambio con boleta"
+      ],
+      "responses": [
+        "Para cambios o devoluciones, normalmente se solicita comprobante de compra y que el producto este sin uso y en buen estado. El plazo puede variar segun politica vigente.",
+        "Puedes solicitar cambio si el producto conserva sus condiciones originales y cuentas con comprobante. Si hubo defecto de fabrica, corresponde revision por garantia.",
+        "Te recomiendo llevar boleta, empaque y producto en buen estado. ¿El cambio es por talla, modelo, falla o preferencia?"
+      ]
+    },
+    {
+      "tag": "contacto",
+      "patterns": [
+        "telefono",
+        "numero",
+        "email",
+        "correo",
+        "contacto",
+        "whatsapp",
+        "instagram",
+        "facebook",
+        "atencion al cliente",
+        "hablar con alguien",
+        "asesor"
+      ],
+      "responses": [
+        "Puedes comunicarte con atencion al cliente por WhatsApp, telefono, correo o redes sociales oficiales. Ten a la mano tu consulta y datos de compra si aplica.",
+        "Para una atencion mas rapida, contacta por WhatsApp o redes oficiales. Si es por pedido, reclamo o garantia, incluye tu comprobante o numero de orden.",
+        "Puedo orientarte por aqui, y si necesitas validacion de datos de compra, lo mejor es contactar a un asesor de atencion al cliente."
+      ]
+    },
+    {
+      "tag": "pagos",
+      "patterns": [
+        "formas de pago",
+        "metodos de pago",
+        "aceptan tarjeta",
+        "pago en efectivo",
+        "cuotas",
+        "credito",
+        "debito",
+        "yape",
+        "plin",
+        "transferencia",
+        "pago online"
+      ],
+      "responses": [
+        "Aceptamos distintos medios de pago como efectivo, tarjetas de credito o debito, Yape, Plin y pagos online segun el canal de compra.",
+        "Puedes pagar con tarjeta, efectivo y medios digitales disponibles. En compras online, el pago se realiza por pasarela segura.",
+        "Los metodos de pago pueden variar entre tienda fisica y web. ¿Quieres saber sobre pago en tienda u online?"
+      ]
+    },
+    {
+      "tag": "despedida",
+      "patterns": [
+        "adios",
+        "hasta luego",
+        "chao",
+        "chau",
+        "gracias",
+        "muchas gracias",
+        "eso era todo",
+        "listo",
+        "hasta pronto",
+        "me ayudaste"
+      ],
+      "responses": [
+        "Gracias por comunicarte con Renzo Costa. Que tengas un excelente dia.",
+        "Fue un gusto ayudarte. Si tienes otra consulta, estare aqui.",
+        "Gracias por tu visita. Esperamos verte pronto en nuestros canales de atencion."
+      ]
+    },
+    {
+      "tag": "desconocido",
+      "patterns": [],
+      "responses": [
+        "No entendi completamente tu consulta. Puedo ayudarte con productos, precios, promociones, delivery, seguimiento de pedidos, reclamos, garantias, tallas, materiales, tiendas y pagos.",
+        "Podrias reformular tu pregunta? Estoy preparado para responder sobre catalogo, precios, horarios, ubicacion, cambios, garantias, delivery y reclamos.",
+        "Aun no tengo una respuesta exacta para eso. Prueba preguntando por productos, promociones, delivery, seguimiento de pedido, garantia, tallas o materiales."
+      ]
+    }
+  ]
+}

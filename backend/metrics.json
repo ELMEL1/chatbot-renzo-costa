@@ -1,0 +1,20 @@
+{
+    "total_consultas": 90,
+    "saludo": 15,
+    "productos": 18,
+    "precios": 10,
+    "promociones": 11,
+    "delivery": 1,
+    "seguimiento_pedido": 1,
+    "reclamos": 2,
+    "garantia": 1,
+    "tallas": 1,
+    "materiales": 1,
+    "horarios": 4,
+    "ubicacion": 6,
+    "devoluciones": 1,
+    "contacto": 9,
+    "pagos": 6,
+    "despedida": 0,
+    "desconocido": 3
+}

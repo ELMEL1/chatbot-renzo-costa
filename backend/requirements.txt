@@ -4,3 +4,4 @@
 
 flask==3.0.3          # Framework web para crear el servidor y los endpoints
 flask-cors==4.0.1     # Permite que el frontend (HTML) acceda al backend (Flask)
+gunicorn==22.0.0

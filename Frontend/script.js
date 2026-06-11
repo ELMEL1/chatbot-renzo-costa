@@ -4,8 +4,13 @@ const contenedorMensajes = document.getElementById("chatMensajes");
 const inputMensaje = document.getElementById("inputMensaje");
 const btnEnviar = document.getElementById("btnEnviar");
 const indicadorEscribiendo = document.getElementById("indicadorEscribiendo");
+const chatWidget = document.getElementById("chatWidget");
+const btnAbrirChat = document.getElementById("btnAbrirChat");
+const btnCerrarChat = document.getElementById("btnCerrarChat");
+const btnMinimizarChat = document.getElementById("btnMinimizarChat");
 
 let esperandoRespuesta = false;
+let saludoMostrado = false;
 
 function obtenerHora() {
   const ahora = new Date();
@@ -98,6 +103,39 @@ function actualizarEstadoEntrada(deshabilitar) {
   }
 }
 
+function mostrarSaludoInicial() {
+  if (saludoMostrado) return;
+
+  saludoMostrado = true;
+  setTimeout(function() {
+    agregarMensaje(
+      "Hola, soy el asistente virtual de Renzo Costa. Puedo ayudarte con productos, precios, promociones, delivery, reclamos, seguimiento de pedidos, garantias, tallas y materiales. ¿En que puedo ayudarte hoy?",
+      "bot"
+    );
+  }, 250);
+}
+
+function abrirChat() {
+  chatWidget.classList.add("is-open");
+  chatWidget.classList.remove("is-minimized");
+  btnAbrirChat.setAttribute("aria-expanded", "true");
+  mostrarSaludoInicial();
+  setTimeout(() => inputMensaje.focus(), 120);
+}
+
+window.abrirChat = abrirChat;
+
+function cerrarChat() {
+  chatWidget.classList.remove("is-open", "is-minimized");
+  btnAbrirChat.setAttribute("aria-expanded", "false");
+}
+
+function minimizarChat() {
+  chatWidget.classList.remove("is-open");
+  chatWidget.classList.add("is-minimized");
+  btnAbrirChat.setAttribute("aria-expanded", "false");
+}
+
 async function enviarMensaje() {
   if (esperandoRespuesta) return;
 
@@ -149,26 +187,35 @@ async function enviarMensaje() {
 function enviarDesdeChip(texto) {
   if (esperandoRespuesta) return;
 
+  abrirChat();
   inputMensaje.value = texto;
   enviarMensaje();
 }
 
-btnEnviar.addEventListener("click", enviarMensaje);
-
-inputMensaje.addEventListener("keydown", function(evento) {
-  if (evento.key === "Enter" && !evento.shiftKey) {
-    evento.preventDefault();
-    enviarMensaje();
-  }
-});
-
 window.addEventListener("DOMContentLoaded", function() {
-  setTimeout(function() {
-    agregarMensaje(
-      "Hola, soy el asistente virtual de Renzo Costa. Puedo ayudarte con productos, precios, promociones, delivery, reclamos, seguimiento de pedidos, garantias, tallas y materiales. ¿En que puedo ayudarte hoy?",
-      "bot"
-    );
-  }, 450);
+  btnAbrirChat.setAttribute("aria-expanded", "false");
 
-  inputMensaje.focus();
+  btnEnviar.addEventListener("click", enviarMensaje);
+  btnCerrarChat.addEventListener("click", cerrarChat);
+  btnMinimizarChat.addEventListener("click", minimizarChat);
+
+  document.addEventListener("click", function(evento) {
+    const botonAbrir = evento.target.closest("[data-open-chat]");
+    const chip = evento.target.closest("[data-chip]");
+
+    if (botonAbrir) {
+      abrirChat();
+    }
+
+    if (chip) {
+      enviarDesdeChip(chip.dataset.chip);
+    }
+  });
+
+  inputMensaje.addEventListener("keydown", function(evento) {
+    if (evento.key === "Enter" && !evento.shiftKey) {
+      evento.preventDefault();
+      enviarMensaje();
+    }
+  });
 });

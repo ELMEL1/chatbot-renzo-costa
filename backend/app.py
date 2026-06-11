@@ -2,7 +2,7 @@ import json
 import os
 
 from chatbot import obtener_respuesta
-from flask import Flask, jsonify, request, send_from_directory, session
+from flask import Flask, abort, jsonify, request, send_from_directory, session
 from flask_cors import CORS
 
 
@@ -76,6 +76,11 @@ def reiniciar_sesion():
 
 @app.route("/metrics", methods=["GET"])
 def obtener_metricas():
+    clave_metricas = os.environ.get("METRICS_ACCESS_KEY")
+
+    if not clave_metricas or request.args.get("key") != clave_metricas:
+        abort(404)
+
     try:
         ruta_metricas = os.path.join(os.path.dirname(__file__), "metrics.json")
 
@@ -100,7 +105,6 @@ if __name__ == "__main__":
     print("GET  /api/status")
     print("POST /chat")
     print("POST /session/reset")
-    print("GET  /metrics")
     print("=" * 60)
 
     app.run(debug=True, host="0.0.0.0", port=5000, threaded=True)

@@ -1184,7 +1184,21 @@ input {
   color: var(--color-texto-suave);
 }
 
-.contact-callout a {
+.contact-callout {
+  margin-top: 34px;
+  margin-bottom: 76px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border-radius: var(--radio);
+  background: linear-gradient(135deg, #efe4d4, #fffaf2);
+  border: 1px solid #e5d9c8;
+}
+
+.contact-callout a,
+.contact-callout button {
   min-height: 44px;
   padding: 0 18px;
   display: inline-flex;
@@ -1192,14 +1206,16 @@ input {
   justify-content: center;
   flex: none;
   border-radius: 999px;
+  border: 0;
   background: #0f1720;
   color: #fff;
+  cursor: pointer;
   font-weight: 900;
   text-decoration: none;
 }
 
 .store-footer {
-  padding: 24px 16px 110px;
+  padding: 34px 16px 125px;
   text-align: center;
   color: var(--color-texto-suave);
   border-top: 1px solid #e3d7c7;

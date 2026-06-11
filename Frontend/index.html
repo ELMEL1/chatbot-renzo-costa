@@ -4,105 +4,180 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Renzo Costa - Asistente Virtual</title>
-  <meta name="description" content="Chatbot de atencion al cliente para Renzo Costa. Consulta productos, precios, horarios, delivery, garantias y mas.">
+  <meta name="description" content="Demostracion del chatbot de atencion al cliente para Renzo Costa.">
   <link rel="icon" type="image/jpeg" href="logo1.jpg">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <header class="header">
-    <div class="header-inner">
-      <div class="header-logo">
-        <div class="header-logo-icon">
-          <img src="logo1.jpg" alt="Logo Renzo Costa">
-        </div>
-        <div class="header-brand">
-          <h1>RENZO COSTA</h1>
-          <p>Cuero & Moda Peruana</p>
-        </div>
-      </div>
+<body class="store-page">
+  <div class="top-strip">
+    <span>Envios a todo el Peru</span>
+    <strong>Calidad que te acompana siempre</strong>
+    <span>Atencion 24/7</span>
+  </div>
 
-      <div class="header-badge">Asistente Virtual Activo</div>
+  <header class="store-header">
+    <div class="store-header-inner">
+      <a class="store-brand" href="#inicio" aria-label="Ir al inicio">
+        <img src="logo1.jpg" alt="Logo Renzo Costa">
+        <div>
+          <strong>RENZO COSTA</strong>
+          <span>Accesorios que hablan de ti</span>
+        </div>
+      </a>
+
+      <nav class="store-nav" aria-label="Navegacion principal">
+        <a href="#inicio">Inicio</a>
+        <a href="#asistente">Asistente</a>
+        <a href="#productos">Productos</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
     </div>
   </header>
 
-  <main class="hero">
-    <section class="info-panel">
-      <div class="info-eyebrow">Asistencia 24/7</div>
-
-      <h2 class="info-titulo">
-        Tu consulta,<br>
-        <span>respondida al instante</span>
-      </h2>
-
-      <p class="info-descripcion">
-        Nuestro asistente virtual te ayuda con productos, precios, promociones,
-        delivery, cambios, garantias, seguimiento de pedidos y ubicacion de tiendas.
-      </p>
-
-      <div class="features-grid">
-        <div class="feature-card">
-          <div class="feature-icon">01</div>
-          <div class="feature-text">
-            <strong>Respuesta inmediata</strong>
-            <span>Atencion rapida para consultas frecuentes.</span>
-          </div>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon">02</div>
-          <div class="feature-text">
-            <strong>Mas temas cubiertos</strong>
-            <span>Pedidos, reclamos, tallas, materiales y pagos.</span>
-          </div>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon">03</div>
-          <div class="feature-text">
-            <strong>Tolerante a errores</strong>
-            <span>Reconoce consultas aunque tengan faltas ortograficas.</span>
-          </div>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon">04</div>
-          <div class="feature-text">
-            <strong>Experiencia guiada</strong>
-            <span>Chips rapidos para iniciar una conversacion.</span>
-          </div>
+  <main>
+    <section class="store-hero" id="inicio">
+      <div class="store-hero-content">
+        <span class="hero-pill">Bienvenido a Renzo Costa</span>
+        <h1>Tu estilo, nuestra pasion</h1>
+        <p>
+          Encuentra accesorios exclusivos con disenos elegantes, duraderos y
+          pensados para acompanarte todos los dias.
+        </p>
+        <div class="hero-actions">
+          <button class="primary-action" type="button" data-open-chat>
+            Preguntale a nuestro asistente
+          </button>
+          <a class="secondary-action" href="#productos">Ver productos</a>
         </div>
       </div>
 
-      <div class="topicos-label">Preguntas frecuentes</div>
-      <div class="topicos-chips">
-        <button class="chip" onclick="enviarDesdeChip('Que productos tienen?')">Productos</button>
-        <button class="chip" onclick="enviarDesdeChip('Cuales son los precios?')">Precios</button>
-        <button class="chip" onclick="enviarDesdeChip('Tienen promociones?')">Promociones</button>
-        <button class="chip" onclick="enviarDesdeChip('Hacen delivery?')">Delivery</button>
-        <button class="chip" onclick="enviarDesdeChip('Quiero seguir mi pedido')">Seguimiento</button>
-        <button class="chip" onclick="enviarDesdeChip('Como hago un reclamo?')">Reclamos</button>
-        <button class="chip" onclick="enviarDesdeChip('Como funciona la garantia?')">Garantia</button>
-        <button class="chip" onclick="enviarDesdeChip('Tienen guia de tallas?')">Tallas</button>
-        <button class="chip" onclick="enviarDesdeChip('De que material son los productos?')">Materiales</button>
-        <button class="chip" onclick="enviarDesdeChip('Cual es el horario de atencion?')">Horarios</button>
-        <button class="chip" onclick="enviarDesdeChip('Donde estan ubicados?')">Tiendas</button>
-        <button class="chip" onclick="enviarDesdeChip('Cuales son las formas de pago?')">Pagos</button>
+      <div class="product-showcase" aria-label="Productos destacados">
+        <div class="showcase-item wallet"></div>
+        <div class="showcase-item backpack"></div>
+        <div class="showcase-item bag"></div>
+        <div class="showcase-item belt"></div>
       </div>
     </section>
 
-    <section class="chat-panel" aria-label="Chat de atencion al cliente">
+    <section class="benefits-bar" aria-label="Beneficios">
+      <article>
+        <span>01</span>
+        <strong>Envios rapidos</strong>
+        <p>A Lima y provincias segun cobertura.</p>
+      </article>
+      <article>
+        <span>02</span>
+        <strong>Productos de calidad</strong>
+        <p>Materiales seleccionados y disenos duraderos.</p>
+      </article>
+      <article>
+        <span>03</span>
+        <strong>Pagos seguros</strong>
+        <p>Tarjeta, Yape, Plin y canales digitales.</p>
+      </article>
+      <article>
+        <span>04</span>
+        <strong>Atencion 24/7</strong>
+        <p>Asistente virtual siempre disponible.</p>
+      </article>
+    </section>
+
+    <section class="assistant-section" id="asistente">
+      <div class="section-heading">
+        <span>Chatbot integrado</span>
+        <h2>Que puede hacer nuestro asistente</h2>
+        <p>
+          El asistente responde consultas frecuentes y ayuda al usuario durante
+          su recorrido dentro de la pagina.
+        </p>
+      </div>
+
+      <div class="assistant-capabilities">
+        <article>
+          <span>Productos</span>
+          <strong>Informacion de catalogo</strong>
+          <p>Consulta carteras, billeteras, bolsos, correas, zapatos y mas.</p>
+        </article>
+        <article>
+          <span>Precios</span>
+          <strong>Rangos referenciales</strong>
+          <p>Obtiene precios aproximados segun el producto seleccionado.</p>
+        </article>
+        <article>
+          <span>Tiendas</span>
+          <strong>Ubicacion y horarios</strong>
+          <p>Resuelve preguntas sobre atencion, sedes y disponibilidad.</p>
+        </article>
+        <article>
+          <span>Asesor</span>
+          <strong>Contacto por WhatsApp</strong>
+          <p>Abre un enlace directo para comunicarse con un asesor.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="product-section" id="productos">
+      <div class="section-heading">
+        <span>Categoria demo</span>
+        <h2>Productos frecuentes</h2>
+      </div>
+
+      <div class="product-grid">
+        <article>
+          <div class="product-thumb cartera"></div>
+          <strong>Carteras</strong>
+          <p>Modelos pequenos, medianos y grandes.</p>
+        </article>
+        <article>
+          <div class="product-thumb billetera"></div>
+          <strong>Billeteras</strong>
+          <p>Clasicas, compactas y tarjeteros.</p>
+        </article>
+        <article>
+          <div class="product-thumb bolso"></div>
+          <strong>Bolsos</strong>
+          <p>Opciones para uso diario y ocasiones especiales.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact-callout" id="contacto">
+      <div>
+        <span>Atencion personalizada</span>
+        <h2>Necesitas ayuda con tu compra</h2>
+        <p>Abre el asistente virtual para consultar productos, precios, horarios o comunicarte con un asesor.</p>
+      </div>
+      <button class="primary-action" type="button" data-open-chat>Hablar con el asistente</button>
+    </section>
+  </main>
+
+  <footer class="store-footer">
+    <p>2026 Renzo Costa - Proyecto de Tesis - Universidad de Ciencias y Humanidades</p>
+  </footer>
+
+  <aside class="chat-widget" id="chatWidget" aria-label="Chat de atencion al cliente">
+    <section class="chat-panel" id="chatPanel">
       <div class="chat-header">
         <div class="chat-avatar">
           <img src="logo1.jpg" alt="Logo Renzo Costa">
         </div>
         <div class="chat-header-info">
-          <strong>Asistente Renzo Costa</strong>
-          <span>En linea - Responde al instante</span>
+          <strong>Asistente Virtual</strong>
+          <span>Renzo Costa</span>
         </div>
-        <div class="online-dot" title="En linea"></div>
+        <button class="chat-window-btn" type="button" id="btnMinimizarChat" aria-label="Minimizar chat">-</button>
+        <button class="chat-window-btn" type="button" id="btnCerrarChat" aria-label="Cerrar chat">x</button>
       </div>
 
       <div class="chat-mensajes" id="chatMensajes" role="log" aria-live="polite"></div>
+
+      <div class="quick-replies" aria-label="Consultas rapidas">
+        <button type="button" data-chip="Que productos tienen?">Productos</button>
+        <button type="button" data-chip="Cuales son los precios?">Precios</button>
+        <button type="button" data-chip="Donde estan ubicados?">Ubicacion</button>
+        <button type="button" data-chip="Cual es el horario de atencion?">Horarios</button>
+        <button type="button" data-chip="Necesito comunicarme con un asesor">Asesor</button>
+      </div>
 
       <div class="indicador-escribiendo" id="indicadorEscribiendo" aria-label="El bot esta escribiendo">
         <div class="mensaje-avatar">
@@ -124,7 +199,6 @@
           autocomplete="off"
           aria-label="Escribe un mensaje"
         />
-
         <button id="btnEnviar" title="Enviar mensaje" aria-label="Enviar mensaje">
           <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
@@ -132,13 +206,12 @@
         </button>
       </div>
     </section>
-  </main>
 
-  <footer class="footer">
-    <p class="footer-copy">
-      2026 Renzo Costa - Proyecto de Tesis - Universidad de Ciencias y Humanidades
-    </p>
-  </footer>
+    <button class="chat-launcher" id="btnAbrirChat" type="button" aria-label="Abrir asistente virtual">
+      <img src="logo1.jpg" alt="">
+      <span class="launcher-dot">1</span>
+    </button>
+  </aside>
 
   <script src="script.js"></script>
 </body>

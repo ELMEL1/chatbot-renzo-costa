@@ -6,12 +6,12 @@
   <title>Renzo Costa - Asistente Virtual</title>
   <meta name="description" content="Demostracion del chatbot de atencion al cliente para Renzo Costa.">
   <link rel="icon" type="image/jpeg" href="logo1.jpg">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=3">
 </head>
 <body class="store-page">
   <div class="top-strip">
     <span>Envios a todo el Peru</span>
-    <strong>Calidad que te acompana siempre</strong>
+    <strong>Calidad que te acompaña siempre</strong>
     <span>Atencion 24/7</span>
   </div>
 
@@ -44,7 +44,7 @@
           pensados para acompanarte todos los dias.
         </p>
         <div class="hero-actions">
-          <button class="primary-action" type="button" data-open-chat>
+          <button class="primary-action" type="button" data-open-chat onclick="abrirChat()">
             Preguntale a nuestro asistente
           </button>
           <a class="secondary-action" href="#productos">Ver productos</a>
@@ -147,7 +147,7 @@
         <h2>Necesitas ayuda con tu compra</h2>
         <p>Abre el asistente virtual para consultar productos, precios, horarios o comunicarte con un asesor.</p>
       </div>
-      <button class="primary-action" type="button" data-open-chat>Hablar con el asistente</button>
+      <button class="primary-action" type="button" data-open-chat onclick="abrirChat()">Hablar con el asistente</button>
     </section>
   </main>
 
@@ -207,12 +207,12 @@
       </div>
     </section>
 
-    <button class="chat-launcher" id="btnAbrirChat" type="button" aria-label="Abrir asistente virtual">
+    <button class="chat-launcher" id="btnAbrirChat" type="button" aria-label="Abrir asistente virtual" data-open-chat onclick="abrirChat()">
       <img src="logo1.jpg" alt="">
       <span class="launcher-dot">1</span>
     </button>
   </aside>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=3"></script>
 </body>
 </html>
